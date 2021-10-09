@@ -1,4 +1,4 @@
-FROM node:14-alpine as stage
+FROM node:16-alpine as stage
 WORKDIR /app
 COPY package.json /app/package.json
 RUN npm install --only=prod
