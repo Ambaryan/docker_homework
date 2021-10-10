@@ -7,3 +7,24 @@ services:
     ports:
       - 8010:80
 
+  backend:
+     build: ./lib_catalog
+     ports:
+      - 8020:80
+
+
+
+  database:
+    image: postgres:12
+    restart: always
+    volumes: 
+      - ./data_db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: django
+      POSTGRES_USER: django
+      POSTGRES_DB: django
+    ports:
+      - 5432:5432
+
+
+
