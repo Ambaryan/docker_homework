@@ -134,9 +134,12 @@ REST_FRAMEWORK = {
         ['django_filters.rest_framework.DjangoFilterBackend',
                             'rest_framework.filters.SearchFilter']
 }
+ 
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",
+    "http://localhost:8010",
+
+
 ]
 
 FIXTURES_DIRS = os.path.join(BASE_DIR, 'catalog/fixtures')
